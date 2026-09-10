@@ -76,40 +76,62 @@ export function Header() {
       </div>
       <div className={cn("gold-rule h-px transition-opacity duration-500", scrolled ? "opacity-100" : "opacity-0")} />
 
-      {/* Mobile full-screen navigation */}
+      {/* Mobile / tablet off-canvas drawer (slides in from left) */}
       <div
         className={cn(
-          "fixed inset-0 top-24 z-40 arabesque bg-background/98 backdrop-blur-xl transition-all duration-400 lg:hidden",
+          "fixed inset-0 z-[60] bg-background/70 backdrop-blur-sm transition-opacity duration-300 lg:hidden",
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0",
         )}
+        aria-hidden={!open}
+        onClick={() => setOpen(false)}
+      />
+      <aside
+        className={cn(
+          "fixed inset-y-0 left-0 z-[70] flex w-[300px] max-w-[85vw] flex-col border-r border-gold/25 bg-background shadow-[20px_0_60px_-15px_rgba(0,0,0,0.6)] transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] lg:hidden",
+          open ? "translate-x-0" : "-translate-x-full",
+        )}
+        aria-hidden={!open}
       >
-        <div className="flex h-full flex-col justify-between px-6 py-10">
-          <nav className="flex flex-col gap-1">
-            {nav.map((item, i) => (
-              <Link
-                key={item.to}
-                to={item.to}
-                onClick={() => setOpen(false)}
-                activeOptions={{ exact: item.to === "/" }}
-                activeProps={{ className: "text-gold-bright" }}
-                inactiveProps={{ className: "text-silver-light" }}
-                className="border-b border-border/60 py-4 text-2xl font-bold tracking-tight"
-              >
-                <span className="me-4 font-mono text-xs text-gold/70">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                {t(item.label)}
-              </Link>
-            ))}
-          </nav>
-          <div className="flex items-center justify-between gap-4">
-            <LanguageSwitcher />
-            <GoldLink to="/contact" className="px-5 py-3" >
-              {t(ui.contactCta)}
-            </GoldLink>
-          </div>
+        <div className="flex items-center justify-between border-b border-border/60 px-6 py-5">
+          <img src={logo} alt={t(company.name)} className="h-12 w-auto object-contain" />
+          <button
+            type="button"
+            onClick={() => setOpen(false)}
+            aria-label={t(ui.close)}
+            className="text-silver-light transition-colors hover:text-gold"
+          >
+            <X className="size-6" />
+          </button>
         </div>
-      </div>
+
+        <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-6 py-6">
+          {nav.map((item, i) => (
+            <Link
+              key={item.to}
+              to={item.to}
+              onClick={() => setOpen(false)}
+              activeOptions={{ exact: item.to === "/" }}
+              activeProps={{ className: "border-gold/40 bg-gold/10 text-gold-bright" }}
+              inactiveProps={{ className: "border-transparent text-silver-light hover:bg-gold/5" }}
+              className="rounded-md border px-4 py-3.5 text-lg font-semibold tracking-tight transition-colors"
+            >
+              <span className="me-3 font-mono text-xs text-gold/70">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              {t(item.label)}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex flex-col gap-4 border-t border-border/60 px-6 py-6">
+          <LanguageSwitcher />
+          <span onClick={() => setOpen(false)}>
+            <GoldLink to="/contact" className="justify-center px-5 py-3">
+            {t(ui.contactCta)}
+          </GoldLink>
+          </span>
+        </div>
+      </aside>
     </header>
   );
 }
