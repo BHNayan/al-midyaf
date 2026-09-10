@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link, type LinkProps } from "@tanstack/react-router";
 import { cn } from "@/lib/utils";
 
 const base =
@@ -19,7 +19,7 @@ export function GoldLink({
   variant = "gold",
   className,
 }: {
-  to: string;
+  to: LinkProps["to"];
   children: React.ReactNode;
   variant?: Variant;
   className?: string;

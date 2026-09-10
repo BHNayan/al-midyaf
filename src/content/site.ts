@@ -32,7 +32,9 @@ export const company = {
   country: { en: "Saudi Arabia", ar: "المملكة العربية السعودية" } as Bi,
 };
 
-export const nav: { to: string; label: Bi }[] = [
+import type { LinkProps } from "@tanstack/react-router";
+
+export const nav: { to: LinkProps["to"]; label: Bi }[] = [
   { to: "/", label: { en: "Home", ar: "الرئيسية" } },
   { to: "/about", label: { en: "About", ar: "من نحن" } },
   { to: "/services", label: { en: "Services", ar: "خدماتنا" } },
