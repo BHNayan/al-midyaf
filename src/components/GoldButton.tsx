@@ -19,7 +19,7 @@ export function GoldLink({
   variant = "gold",
   className,
 }: {
-  to: LinkProps["to"];
+  to: NonNullable<LinkProps["to"]>;
   children: React.ReactNode;
   variant?: Variant;
   className?: string;
