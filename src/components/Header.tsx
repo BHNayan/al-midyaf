@@ -79,7 +79,7 @@ export function Header() {
       {/* Mobile full-screen navigation */}
       <div
         className={cn(
-          "fixed inset-0 top-20 z-40 arabesque bg-background/98 backdrop-blur-xl transition-all duration-400 lg:hidden",
+          "fixed inset-0 top-24 z-40 arabesque bg-background/98 backdrop-blur-xl transition-all duration-400 lg:hidden",
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0",
         )}
       >
