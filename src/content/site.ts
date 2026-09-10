@@ -34,7 +34,7 @@ export const company = {
 
 import type { LinkProps } from "@tanstack/react-router";
 
-export const nav: { to: LinkProps["to"]; label: Bi }[] = [
+export const nav: { to: NonNullable<LinkProps["to"]>; label: Bi }[] = [
   { to: "/", label: { en: "Home", ar: "الرئيسية" } },
   { to: "/about", label: { en: "About", ar: "من نحن" } },
   { to: "/services", label: { en: "Services", ar: "خدماتنا" } },

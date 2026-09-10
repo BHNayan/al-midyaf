@@ -61,7 +61,7 @@ function Home() {
             className="size-full object-cover slow-zoom"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/85 via-background/70 to-background" />
-          <div className="absolute inset-0 bg-gradient-to-e from-background via-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-background via-background/40 to-transparent rtl:bg-linear-to-l" />
         </div>
         <div className="absolute inset-0 arabesque opacity-50" aria-hidden />
 
