@@ -41,14 +41,6 @@ export function Header() {
       <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between gap-6 px-5 sm:px-8 lg:h-24">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img src={logo} alt={t(company.name)} width={492} height={328} className="h-12 w-auto object-contain lg:h-14" />
-          <span className="hidden leading-tight sm:block">
-            <span className="block text-sm font-bold uppercase tracking-[0.16em] text-silver-light">
-              {t(company.name)}
-            </span>
-            <span className="block text-[0.6rem] tracking-[0.24em] text-gold/80">
-              {isAr ? "دعاية وإعلان وتأجير" : "ADVERTISING · PUBLICITY · RENTAL"}
-            </span>
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">

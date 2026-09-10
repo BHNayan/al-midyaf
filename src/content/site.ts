@@ -25,6 +25,10 @@ export const company = {
     en: "Advertising • Publicity • Rental Services",
     ar: "الدعاية • الإعلان • خدمات التأجير",
   } as Bi,
+  shortDescription: {
+    en: "Premium advertising, publicity and rental solutions that put your brand in front of the right people across Saudi Arabia.",
+    ar: "حلول متميزة في الدعاية والإعلان والتأجير تضع علامتك التجارية أمام الجمهور المناسب في جميع أنحاء المملكة العربية السعودية.",
+  } as Bi,
   phone: "0555199480",
   website: "almudyaf.net",
   email: "[EMAIL ADDRESS]",

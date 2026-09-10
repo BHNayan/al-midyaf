@@ -25,7 +25,7 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            {t(company.activity)}
+            {t(company.shortDescription)}
           </p>
           <LanguageSwitcher className="mt-8" />
         </div>
