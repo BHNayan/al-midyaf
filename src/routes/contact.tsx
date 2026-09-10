@@ -80,9 +80,9 @@ function ContactPage() {
                 src={logo}
                 alt={t(company.name)}
                 loading="lazy"
-                width={512}
-                height={512}
-                className="h-16 w-16 object-contain"
+                width={492}
+                height={328}
+                className="h-20 w-auto object-contain"
               />
               <span className="gold-rule mt-7 block h-px w-16" />
               <ul className="mt-8 space-y-7">
