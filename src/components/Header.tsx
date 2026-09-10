@@ -37,9 +37,9 @@ export function Header() {
           : "border-b border-transparent bg-transparent",
       )}
     >
-      <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between gap-6 px-5 sm:px-8 lg:h-24">
+      <div className="mx-auto flex h-22 max-w-[1400px] items-center justify-between gap-6 px-5 sm:px-8 lg:h-28">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo} alt={t(company.name)} width={492} height={328} className="h-12 w-auto object-contain lg:h-14" />
+          <img src={logo} alt={t(company.name)} width={492} height={328} className="h-16 w-auto object-contain lg:h-22" />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
