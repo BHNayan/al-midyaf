@@ -125,7 +125,8 @@ export function Header() {
 
         <div className="flex flex-col gap-4 border-t border-border/60 px-6 py-6">
           <LanguageSwitcher />
-          <GoldLink to="/contact" className="justify-center px-5 py-3" onClick={() => setOpen(false)}>
+          <span onClick={() => setOpen(false)}>
+            <GoldLink to="/contact" className="justify-center px-5 py-3">
             {t(ui.contactCta)}
           </GoldLink>
         </div>
