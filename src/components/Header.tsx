@@ -4,14 +4,13 @@ import { Menu, X } from "lucide-react";
 
 import logo from "@/assets/logo.png";
 import { company, nav, ui } from "@/content/site";
-import { useLang, useT } from "@/lib/language";
+import { useT } from "@/lib/language";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { GoldLink } from "@/components/GoldButton";
 import { cn } from "@/lib/utils";
 
 export function Header() {
   const t = useT();
-  const { isAr } = useLang();
   const [scrolled, setScrolled] = React.useState(false);
   const [open, setOpen] = React.useState(false);
 
