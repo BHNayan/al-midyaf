@@ -129,6 +129,7 @@ export function Header() {
             <GoldLink to="/contact" className="justify-center px-5 py-3">
             {t(ui.contactCta)}
           </GoldLink>
+          </span>
         </div>
       </aside>
     </header>
