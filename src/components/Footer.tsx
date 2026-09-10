@@ -14,7 +14,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-[1400px] gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.4fr_1fr_1fr] lg:py-20">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logo} alt={t(company.name)} loading="lazy" width={512} height={512} className="h-12 w-12 object-contain" />
+            <img src={logo} alt={t(company.name)} loading="lazy" width={492} height={328} className="h-14 w-auto object-contain" />
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-silver-light">
                 {company.name.en}
